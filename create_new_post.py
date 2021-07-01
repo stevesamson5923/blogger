@@ -18,13 +18,13 @@ client = None
 blog_space = None
 blogdata_content_type = None
 space_id = 'ma8yestsieel'
-management_api = "CFPAT-ilH5jr5ioiOuNvh1Ior2QjEs4_mIP7Q3B1DpEcsD1K8"
+management_api = "YOUR_CONTENTFUL_API"
 post_entries = None
 asset_entries = None
 
 def contentful_api():
     global blogdata_content_type,blog_space,client
-    management_api = "CFPAT-ilH5jr5ioiOuNvh1Ior2QjEs4_mIP7Q3B1DpEcsD1K8"
+    management_api = "YOUR_CONTENTFUL_API"
     client = contentful_management.Client(management_api)
     blog_space = client.spaces().find(space_id)
     blogdata_content_type = client.content_types(space_id, 'master').find('blogData')
